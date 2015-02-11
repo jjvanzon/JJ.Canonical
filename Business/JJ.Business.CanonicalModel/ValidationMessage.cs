@@ -4,7 +4,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
 
-namespace JJ.Models.Canonical
+namespace JJ.Business.CanonicalModel
 {
     [DataContract]
     public class ValidationMessage

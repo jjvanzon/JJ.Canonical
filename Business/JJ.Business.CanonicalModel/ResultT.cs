@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace JJ.Models.Canonical
+namespace JJ.Business.CanonicalModel
 {
     public class Result<T> : Result
     {
