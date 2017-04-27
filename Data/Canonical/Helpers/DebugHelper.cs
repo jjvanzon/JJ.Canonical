@@ -16,7 +16,7 @@ namespace JJ.Data.Canonical.Helpers
         {
             if (message == null) throw new ArgumentNullException(nameof(message));
 
-            string debuggerDisplay = $"{{{nameof(Message)}}} {message.PropertyKey} - '{message.Text}'";
+            string debuggerDisplay = $"{{{nameof(Message)}}} {message.Key} - '{message.Text}'";
             return debuggerDisplay;
         }
     }
