@@ -5,8 +5,8 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("JJ.Data.Canonical")]
-[assembly: AssemblyDescription("")]
-[assembly: AssemblyConfiguration("Types to share data between JJ projects.")]
+[assembly: AssemblyDescription("Types to share data between JJ projects.")]
+[assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Jan Joost van Zon")]
 [assembly: AssemblyProduct("JJ.Canonical")]
 [assembly: AssemblyCopyright("Copyright © 2013 - 2022 Jan Joost van Zon")]
