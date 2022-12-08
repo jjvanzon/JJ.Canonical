@@ -50,6 +50,8 @@ Here you may find some pointers how to set up a developent environment to build 
 
 - Commit messages:
     - Descriptions may mention projects not part of this repo.
+- No solution file in the first commits.
+    - *JJ.Canonical* projects may first only have been referenced by the solution of the app it was made for. Those solution file are not part of the history here, so the first commits have no solution file.
 - Broken references to `JJ.Framework`:
     - `JJ.Framework` projects are no longer in the same code base.
     - In some cases it may help to clone the [JJ.Framework repository](https://github.com/jjvanzon/JJ.Framework) and put the `JJ.Framework` folder right next to the `JJ.QuestionAndAnswer` folder. This may fix the broken links.
