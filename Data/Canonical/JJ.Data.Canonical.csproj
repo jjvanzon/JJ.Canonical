@@ -56,6 +56,7 @@
     <Compile Include="VoidResultDto.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="JJ.Data.Canonical.nuspec" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
