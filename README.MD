@@ -7,6 +7,7 @@
 - [⚙ Dev Env](#-dev-env)
     - [👨‍💻 Visual Studio](#-visual-studio)
     - [📦 JJ.Framework](#-jjframework)
+- [🚀 Deployment](#-deployment)
 - [🕘 Checking Out Old Commits](#-checking-out-old-commits)
 
 🏛 Architecture
@@ -42,6 +43,12 @@ Here you may find some pointers how to set up a developent environment to build 
 - The following info might be useful for that:
 - Name: JJs-Pre-Release-Package-Feed
 - Source: https://pkgs.dev.azure.com/jjvanzon/1de16010-421a-41a5-90f1-86e9513f2c5b/_packaging/JJs-Pre-Release-Package-Feed/nuget/v3/index.json
+
+🚀 Deployment
+--------------
+
+- `JJ.Data.Canonical` and `JJ.Business.Canonical` can be found right next to the JJ.Framework packages in JJs-Pre-Release-Package-Feed.
+- They are deployed there with Azure Pipelines. There is limited access to the deployment buttons.
 
 🕘 Checking Out Old Commits
 ----------------------------
