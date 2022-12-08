@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("JJ.Business.Canonical")]
-[assembly: AssemblyDescription("Conversion between types from JJ.Data.Canonical and other other systems.")]
+[assembly: AssemblyDescription("Conversion between types to share data between JJ projects.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Jan Joost van Zon")]
 [assembly: AssemblyProduct("JJ.Canonical")]
