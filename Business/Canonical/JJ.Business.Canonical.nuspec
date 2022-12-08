@@ -29,5 +29,6 @@
 	<files>
     <file src="..\..\README.MD" target="" />
     <file src="..\..\Resources\jj-icon-64x64-margin4.png" target="images\icon.png" />
+    <file src="bin\$configuration$\$id$.pdb" target="lib\net461" />
 	</files>
 </package>
