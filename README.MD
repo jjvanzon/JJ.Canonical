@@ -58,10 +58,10 @@ Here you may find some pointers how to set up a developent environment to build 
 
 - Commit messages:
     - Descriptions may mention projects not part of this repo.
-- References to other non-existent projects:
-    - To fix this, try referencing the NuGet version of these dependencies.
 - No solution file in the first commits.
     - *JJ.Canonical* projects may first only have been referenced by the solution of the app it was made for. Those solution file are not part of the history here, so the first commits have no solution file.
+- References to other non-existent projects:
+    - To fix this, try referencing the NuGet version of these dependencies.
 - Broken references to `JJ.Framework`:
     - `JJ.Framework` projects are no longer in the same code base.
     - You could try referencing the NuGet version of these dependencies.
