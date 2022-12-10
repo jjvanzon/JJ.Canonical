@@ -23,6 +23,7 @@ It only contains successful flags and validation messages and combinations of ID
 But at least it for instance gets to combine data from `JJ.Framework.Validation` and `JJ.Framework.Business`  to a single set of models to send it through multiple layers of the architecture.
 
 `JJ.Canonical.Data` holds the model classes.
+
 `JJ.Canonical.Business` holds the code for converting between the disparate systems' models and types.
 
 `JJ.Canonical` used to be copied between multiple projects, so it seemed to make sense to move it to a separate project and share the same code.
