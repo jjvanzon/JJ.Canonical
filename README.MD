@@ -54,7 +54,7 @@ Here you may find some pointers how to set up a developent environment to build 
 🕘 Checking Out Old Commits
 ----------------------------
 
-`JJ.Canonical` was once part of a larger code base. It was extracted to become a new git repository with history in tact. Changes to `JJ.Canonical` usually served some other purpose in some other project for some other app. This may give checking out older history items some quirks. The following may only be relevant when getting older commits (before December 2022).
+`JJ.Canonical` was once part of a larger code base. It was extracted to become a new git repository with history in tact. Changes to `JJ.Canonical` usually served some other purpose in some other project for some other app. This may give checking out older history items some quirks. The following may only be relevant when getting older commits (from before December 2022).
 
 - Commit messages:
     - Descriptions may mention projects not part of this repo.
