@@ -18,10 +18,12 @@ A *canonical model* can be an interesting design pattern in software development
 The concept of a canonical model is also describred in [JJ's Reference Architecture](https://github.com/jjvanzon/JJs-Reference-Architecture) under [Service Architecture](https://github.com/jjvanzon/JJs-Reference-Architecture/blob/master/Service%20Architecture.docx). 
 
 This caconical model is a bit more minimal than others:
-It only contains successful flags and validation messages and combinations of ID's and names. But at least it for instance gets to combine data from `JJ.Framework.Validation` and `JJ.Framework.Business`  to a single set of models to send it through multiple layers of the architecture.
+It only contains successful flags and validation messages and combinations of ID's and names.
 
-- `JJ.Canonical.Data` holds the model classes.
-- `JJ.Canonical.Business` holds the code for converting between the disparate systems' models and types.
+But at least it for instance gets to combine data from `JJ.Framework.Validation` and `JJ.Framework.Business`  to a single set of models to send it through multiple layers of the architecture.
+
+`JJ.Canonical.Data` holds the model classes.
+`JJ.Canonical.Business` holds the code for converting between the disparate systems' models and types.
 
 `JJ.Canonical` used to be copied between multiple projects, so it seemed to make sense to move it to a separate project and share the same code.
 
