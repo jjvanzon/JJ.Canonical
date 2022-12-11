@@ -46,7 +46,7 @@ Here you may find some pointers how to set up a developent environment to build 
 🚀 Deployment
 --------------
 
-- `JJ.Data.Canonical` and `JJ.Business.Canonical` can be found right next to the JJ.Framework packages in JJs-Pre-Release-Package-Feed.
+- `JJ.Data.Canonical` and `JJ.Business.Canonical` can be found right next to the `JJ.Framework` packages in `JJs-Pre-Release-Package-Feed`.
 - They are deployed there with Azure Pipelines. There is limited access to the deployment buttons.
 
 🕘 Checking Out Old Commits
@@ -57,7 +57,7 @@ Here you may find some pointers how to set up a developent environment to build 
 - Commit messages:
     - Descriptions may mention projects not part of this repo.
 - No solution file in the first commits.
-    - *JJ.Canonical* projects may first only have been referenced by the solution of the app it was made for. Those solution file are not part of the history here, so the first commits have no solution file.
+    - `JJ.Canonical` projects may first only have been referenced by the solution of the app it was made for. Those solution file are not part of the history here, so the first commits have no solution file.
 - References to other non-existent projects:
     - To fix this, try referencing the NuGet version of these dependencies.
 - Broken references to `JJ.Framework`:
