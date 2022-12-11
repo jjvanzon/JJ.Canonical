@@ -15,7 +15,7 @@
 
 A *canonical model* can be an interesting design pattern in software development, when exchanging data between multiple systems, that have overlap in functionality.
 
-The concept of a canonical model is also describred in [JJ's Reference Architecture](https://github.com/jjvanzon/JJs-Reference-Architecture) under [Service Architecture](https://github.com/jjvanzon/JJs-Reference-Architecture/blob/master/Service%20Architecture.md). 
+The concept of a canonical model is also describred in JJ's Reference Architecture under [Service Architecture](https://github.com/jjvanzon/JJs-Reference-Architecture/blob/master/Service%20Architecture.md). 
 
 This caconical model is a bit more minimal than others:
 It only contains successful flags and validation messages and combinations of ID's and names.
