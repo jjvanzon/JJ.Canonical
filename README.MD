@@ -13,7 +13,7 @@
 🏛 Architecture
 ----------------
 
-A *canonical model* can be an interesting design pattern in software development, when exchanging data between multiple systems, that have overlap in functionality.
+A *canonical model* can be an interesting design pattern in software development for exchanging data between multiple systems, that have overlap in functionality.
 
 The concept of a canonical model is also describred in JJ's Reference Architecture under [Service Architecture](https://github.com/jjvanzon/JJs-Reference-Architecture/blob/master/Service%20Architecture.md). 
 
