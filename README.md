@@ -1,7 +1,7 @@
 🧱 JJ.Canonical 
 ===============
 
-<h2>📔 Contents</h2>
+<h2>Contents</h2>
 
 - [🏛 Architecture](#-architecture)
 - [🏗️ Dev Env](#️-dev-env)
