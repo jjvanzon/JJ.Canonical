@@ -5,3 +5,4 @@ packages
 nCrunchTemp*.*
 *.user
 *.ncrunchproject
+NCrunch*.xml
