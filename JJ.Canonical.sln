@@ -5,6 +5,8 @@ VisualStudioVersion = 17.11.35312.102
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JJ.Business.CanonicalModel", "Business\JJ.Business.CanonicalModel\JJ.Business.CanonicalModel.csproj", "{08EA4A4E-D815-47AE-9277-DA6672D36214}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JJ.Business.CanonicalModel.Net48", "Business\JJ.Business.CanonicalModel.Net48\JJ.Business.CanonicalModel.Net48.csproj", "{26682821-416E-48F9-BF62-C489844C9700}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{08EA4A4E-D815-47AE-9277-DA6672D36214}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{08EA4A4E-D815-47AE-9277-DA6672D36214}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{08EA4A4E-D815-47AE-9277-DA6672D36214}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26682821-416E-48F9-BF62-C489844C9700}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26682821-416E-48F9-BF62-C489844C9700}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26682821-416E-48F9-BF62-C489844C9700}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26682821-416E-48F9-BF62-C489844C9700}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
