@@ -3,7 +3,10 @@
     <TargetFramework>net9.0</TargetFramework>
     <OutputType>Library</OutputType>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Version>$(VersionPrefix)$(VersionSuffix)</Version>
     <VersionPrefix>0.0.250</VersionPrefix>
+    <!--This works:-->
+    <!--<VersionSuffix>.1</VersionSuffix>--> 
     <Description>Types to share data between JJ projects.</Description>
     <PackageTags>canonical model integration esb</PackageTags>
     <Authors>JJ van Zon</Authors>
