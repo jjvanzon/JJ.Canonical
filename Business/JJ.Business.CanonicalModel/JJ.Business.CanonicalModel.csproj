@@ -9,8 +9,8 @@
     <Authors>JJ van Zon</Authors>
     <Copyright>Copyright © Jan Joost van Zon 2013-2025</Copyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>    
-    <RepositoryUrl>https://github.com/jjvsanzon/JJ.Canonical</RepositoryUrl>
-    <PackageProjectUrl>https://github.com/jjvsanzon/JJ.Canonical</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/jjvanzon/JJ.Canonical</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/jjvanzon/JJ.Canonical</PackageProjectUrl>
     <PackageIcon>jj-icon-64x64-margin4.png</PackageIcon>
     <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
