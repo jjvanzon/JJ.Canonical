@@ -1,0 +1,7 @@
+mode: ContinuousDelivery
+next-version: 0.250.0
+
+branches:
+  '.*':
+    increment: Patch
+    label: ''

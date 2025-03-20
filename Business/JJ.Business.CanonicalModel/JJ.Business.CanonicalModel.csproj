@@ -3,7 +3,7 @@
     <TargetFramework>net9.0</TargetFramework>
     <OutputType>Library</OutputType>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <VersionPrefix>0.0.250</VersionPrefix>
+    <!--<VersionPrefix>0.250</VersionPrefix>-->
     <Description>Types to share data between JJ projects.</Description>
     <PackageTags>canonical model integration esb</PackageTags>
     <Authors>JJ van Zon</Authors>
@@ -27,5 +27,11 @@
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="GitVersion.MsBuild" Version="6.1.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
   </ItemGroup>
 </Project>
