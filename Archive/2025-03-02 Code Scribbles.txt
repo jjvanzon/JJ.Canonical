@@ -1,8 +1,57 @@
   <!-- Doesn't work: -->
-  <Target Name="AutoIncrementVersion"  >
+  <Target Name="AutoIncrementVersion" BeforeTargets="Compile">
     <Message Text="AUTO-INCREMENTING VERSION" Importance="High" />
     <PropertyGroup>
       <VersionSuffix>.2</VersionSuffix>
       <!--<VersionSuffix>suffix$([System.DateTime]::Now.Ticks.ToString())</VersionSuffix>-->
     </PropertyGroup>
   </Target>
+
+Doesn't work:
+
+File: `Directory.Build.props` (in repo root)
+
+Content:
+
+<Project>
+  <PropertyGroup>
+    <!-- 
+      This sets VersionSuffix dynamically.
+      Note: It’s evaluated during project evaluation—so it’s computed once per build.
+      You can change the format as needed.
+    -->
+    <VersionSuffix Condition="'$(VersionSuffix)' == ''">
+      -$([System.DateTime]::Now.ToString("yyyyMMddHHmmss"))
+    </VersionSuffix>
+  </PropertyGroup>
+</Project>
+
+This also doesn't work:
+
+  <Target Name="AutoIncrementVersion" BeforeTargets="Compile">
+    <Message Text="AUTO-INCREMENTING VERSION" Importance="High" />
+    
+    <!-- Read the existing build number -->
+    <ReadLinesFromFile File="$(MSBuildThisFileDirectory)BuildNumber.txt">
+      <Output TaskParameter="Lines" ItemName="BuildNum" />
+    </ReadLinesFromFile>
+
+    <!-- Increment it by 1 -->
+    <ItemGroup>
+      <BuildNum Incremented="$([System.Int32]::Parse(&quot;%(BuildNum.Identity))&quot; + 1)" />
+    </ItemGroup>
+  
+    <!-- Write it back to file -->
+    <WriteLinesToFile
+      File="$(MSBuildThisFileDirectory)BuildNumber.txt"
+      Lines="@(BuildNum->'%(Incremented)')"
+      Overwrite="true" />
+
+    <!-- Construct a Version with that increment -->
+    <PropertyGroup>
+      <VersionSuffix>0.0.@(BuildNum->'%(Incremented)')</VersionSuffix>
+    </PropertyGroup>
+    
+  </Target>
+
+It won't work because in the end it doesn't apply the PropertyGroup. That's already been established.
