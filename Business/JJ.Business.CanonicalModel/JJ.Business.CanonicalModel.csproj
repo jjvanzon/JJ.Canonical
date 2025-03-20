@@ -28,12 +28,4 @@
       <PackagePath>\</PackagePath>
     </None>
   </ItemGroup>
-  <Target Name="AutoIncrementVersion" BeforeTargets="Compile">
-    <PropertyGroup>
-      <!-- <VersionSuffix>$([System.DateTime]::Now.ToString(&quot;yyyy.MM.dd.HHmmss&quot;))</VersionSuffix> -->
-      <!-- You can customize the format and the rule about how version increases here. -->
-      <!--<VersionSuffix>$([System.DateTime]::Now.ToString(&quot;1.MM.dd&quot;))</VersionSuffix>-->
-      <VersionSuffix>$([System.DateTime]::Now.Ticks.ToString())</VersionSuffix>
-    </PropertyGroup>
-  </Target>
 </Project>
