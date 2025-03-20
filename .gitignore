@@ -7,3 +7,4 @@ nCrunchTemp*.*
 *.ncrunchproject
 *.ncrunchsolution
 NCrunch*.xml
+*.cache
