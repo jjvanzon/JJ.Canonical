@@ -1,0 +1,8 @@
+  <!-- Doesn't work: -->
+  <Target Name="AutoIncrementVersion"  >
+    <Message Text="AUTO-INCREMENTING VERSION" Importance="High" />
+    <PropertyGroup>
+      <VersionSuffix>.2</VersionSuffix>
+      <!--<VersionSuffix>suffix$([System.DateTime]::Now.Ticks.ToString())</VersionSuffix>-->
+    </PropertyGroup>
+  </Target>
