@@ -1,5 +1,5 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-  <Import Project="Version.props" Condition="Exists('Version.props')" />
+  <Import Project="BuildNumber.props" Condition="Exists('BuildNumber.props')" />
   <PropertyGroup>
     <TargetFramework>net9.0</TargetFramework>
     <OutputType>Library</OutputType>
@@ -56,11 +56,7 @@
     <Message Text="NextBuildNumber: $(NextBuildNumber)" Importance="High" />
     
     <!-- Write the new version to a temporary MSBuild props file -->
-    <WriteLinesToFile 
-        File="$(MSBuildThisFileDirectory)Version.props" 
-        Lines="&lt;Project&gt;&lt;PropertyGroup&gt;&lt;BuildNumberFromFile&gt;$(NextBuildNumber)&lt;/BuildNumberFromFile&gt;&lt;/PropertyGroup&gt;&lt;/Project&gt;" 
-        Overwrite="true" 
-        Encoding="UTF-8" />
+    <WriteLinesToFile File="$(MSBuildThisFileDirectory)BuildNumber.props" Lines="&lt;Project&gt;&lt;PropertyGroup&gt;&lt;BuildNumberFromFile&gt;$(NextBuildNumber)&lt;/BuildNumberFromFile&gt;&lt;/PropertyGroup&gt;&lt;/Project&gt;" Overwrite="true" Encoding="UTF-8" />
 
   </Target>
 
