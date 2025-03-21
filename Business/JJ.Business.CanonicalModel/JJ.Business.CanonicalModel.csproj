@@ -57,11 +57,6 @@
     <!-- Print the new build number to the MSBuild log -->
     <Message Text="NewBuildNum after increment: $(NewBuildNum)" Importance="High" />
     
-    <!-- Apply the new version -->
-    <!--<PropertyGroup>
-      <Version>0.250.$(NewBuildNum)</Version>
-    </PropertyGroup>-->
-    
     <!-- Write the new version to a temporary MSBuild props file -->
     <WriteLinesToFile 
         File="$(MSBuildThisFileDirectory)Version.props" 
