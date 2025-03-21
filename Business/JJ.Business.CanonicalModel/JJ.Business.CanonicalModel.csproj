@@ -4,8 +4,8 @@
     <TargetFramework>net9.0</TargetFramework>
     <OutputType>Library</OutputType>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Version Condition="'$(VERSION_FROM_FILE)' == ''">0.250.0</Version>
-    <Version Condition="'$(VERSION_FROM_FILE)' != ''">0.250.$(VERSION_FROM_FILE)</Version>
+    <Version Condition="'$(BuildNumberFromFile)' == ''">0.250.0</Version>
+    <Version Condition="'$(BuildNumberFromFile)' != ''">0.250.$(BuildNumberFromFile)</Version>
     <Description>Types to share data between JJ projects.</Description>
     <PackageTags>canonical model integration esb</PackageTags>
     <Authors>JJ van Zon</Authors>
@@ -34,33 +34,31 @@
   </ItemGroup>
   
   <Target Name="AutoIncrementVersion" BeforeTargets="Build">
-    <Message Text="AUTO-INCREMENTING VERSION" Importance="High" />
+    <Message Text="AUTO-INCREMENT VERSION" Importance="High" />
 
     <!-- Read the existing build number -->
     <ReadLinesFromFile File="$(MSBuildThisFileDirectory)BuildNumber.txt" Condition="Exists('$(MSBuildThisFileDirectory)BuildNumber.txt')">
-      <Output TaskParameter="Lines" PropertyName="BuildNum" />
+      <Output TaskParameter="Lines" PropertyName="BuildNumber" />
     </ReadLinesFromFile>
 
-    <!-- Ensure BuildNum is set before incrementing -->
-    <PropertyGroup>
-      <BuildNum Condition="'$(BuildNum)' == ''">0</BuildNum>
-    </PropertyGroup>
+    <!-- Default empty BuildNumber to 0 before incrementing -->
+    <PropertyGroup><BuildNumber Condition="'$(BuildNumber)' == ''">0</BuildNumber></PropertyGroup>
 
-    <!-- Increment the number -->
-    <Exec Command="powershell -Command &quot;[int]$v=$(BuildNum); $v++; Set-Content BuildNumber.txt $v&quot;" />
+    <!-- Increment the number and write to file -->
+    <Exec Command="powershell -Command &quot;[int]$buildNumber=$(BuildNumber); $buildNumber++; Set-Content BuildNumber.txt $buildNumber&quot;" />
 
     <!-- Force MSBuild to re-read the updated file -->
     <ReadLinesFromFile File="$(MSBuildThisFileDirectory)BuildNumber.txt">
-      <Output TaskParameter="Lines" PropertyName="NewBuildNum" />
+      <Output TaskParameter="Lines" PropertyName="NextBuildNumber" />
     </ReadLinesFromFile>
 
     <!-- Print the new build number to the MSBuild log -->
-    <Message Text="NewBuildNum after increment: $(NewBuildNum)" Importance="High" />
+    <Message Text="NextBuildNumber: $(NextBuildNumber)" Importance="High" />
     
     <!-- Write the new version to a temporary MSBuild props file -->
     <WriteLinesToFile 
         File="$(MSBuildThisFileDirectory)Version.props" 
-        Lines="&lt;Project&gt;&lt;PropertyGroup&gt;&lt;VERSION_FROM_FILE&gt;$(NewBuildNum)&lt;/VERSION_FROM_FILE&gt;&lt;/PropertyGroup&gt;&lt;/Project&gt;" 
+        Lines="&lt;Project&gt;&lt;PropertyGroup&gt;&lt;BuildNumberFromFile&gt;$(NextBuildNumber)&lt;/BuildNumberFromFile&gt;&lt;/PropertyGroup&gt;&lt;/Project&gt;" 
         Overwrite="true" 
         Encoding="UTF-8" />
 
