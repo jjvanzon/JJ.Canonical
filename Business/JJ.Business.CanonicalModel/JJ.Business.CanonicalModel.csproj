@@ -17,10 +17,8 @@
     <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
   <ItemGroup>
-    <None Remove="BuildNumber.txt" />
     <None Remove="JJ.Business.CanonicalModel.v3.ncrunchproject" />
     <None Remove="NCrunch.JJ.Business.CanonicalModel_AnalysisBuild.xml" />
-    <None Remove="Version.props" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\README.md">
