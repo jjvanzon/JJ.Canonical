@@ -4,8 +4,8 @@
     <TargetFramework>net9.0</TargetFramework>
     <OutputType>Library</OutputType>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Version Condition="'$(BuildNumberFromFile)' == ''">0.250.0</Version>
-    <Version Condition="'$(BuildNumberFromFile)' != ''">0.250.$(BuildNumberFromFile)</Version>
+    <Version Condition="'$(BuildNumber)' == ''">0.250.0</Version>
+    <Version Condition="'$(BuildNumber)' != ''">0.250.$(BuildNumber)</Version>
     <Description>Types to share data between JJ projects.</Description>
     <PackageTags>canonical model integration esb</PackageTags>
     <Authors>JJ van Zon</Authors>
@@ -34,11 +34,6 @@
   <Target Name="AutoIncrementVersion" BeforeTargets="Build">
     <Message Text="AUTO-INCREMENT VERSION" Importance="High" />
 
-    <!-- Read the existing build number -->
-    <ReadLinesFromFile File="$(MSBuildThisFileDirectory)BuildNumber.txt" Condition="Exists('$(MSBuildThisFileDirectory)BuildNumber.txt')">
-      <Output TaskParameter="Lines" PropertyName="BuildNumber" />
-    </ReadLinesFromFile>
-
     <!-- Default empty BuildNumber to 0 before incrementing -->
     <PropertyGroup><BuildNumber Condition="'$(BuildNumber)' == ''">0</BuildNumber></PropertyGroup>
 
@@ -47,14 +42,14 @@
 
     <!-- Force MSBuild to re-read the updated file -->
     <ReadLinesFromFile File="$(MSBuildThisFileDirectory)BuildNumber.txt">
-      <Output TaskParameter="Lines" PropertyName="NextBuildNumber" />
+      <Output TaskParameter="Lines" PropertyName="BuildNumber" />
     </ReadLinesFromFile>
 
     <!-- Print the new build number to the MSBuild log -->
-    <Message Text="NextBuildNumber: $(NextBuildNumber)" Importance="High" />
+    <Message Text="Next BuildNumber: $(BuildNumber)" Importance="High" />
     
     <!-- Write the new version to a temporary MSBuild props file -->
-    <WriteLinesToFile File="$(MSBuildThisFileDirectory)BuildNumber.props" Lines="&lt;Project&gt;&lt;PropertyGroup&gt;&lt;BuildNumberFromFile&gt;$(NextBuildNumber)&lt;/BuildNumberFromFile&gt;&lt;/PropertyGroup&gt;&lt;/Project&gt;" Overwrite="true" Encoding="UTF-8" />
+    <WriteLinesToFile File="$(MSBuildThisFileDirectory)BuildNumber.props" Lines="&lt;Project&gt;&lt;PropertyGroup&gt;&lt;BuildNumber&gt;$(BuildNumber)&lt;/BuildNumber&gt;&lt;/PropertyGroup&gt;&lt;/Project&gt;" Overwrite="true" Encoding="UTF-8" />
 
   </Target>
 
