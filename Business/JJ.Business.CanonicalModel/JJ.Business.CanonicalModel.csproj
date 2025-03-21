@@ -37,13 +37,10 @@
     <!-- Default empty BuildNumber to 0 before incrementing -->
     <PropertyGroup><BuildNumber Condition="'$(BuildNumber)' == ''">0</BuildNumber></PropertyGroup>
 
-    <!-- Increment the number and write to file -->
-    <Exec Command="powershell -Command &quot;[int]$buildNumber=$(BuildNumber); $buildNumber++; Set-Content BuildNumber.txt $buildNumber&quot;" />
-
-    <!-- Force MSBuild to re-read the updated file -->
-    <ReadLinesFromFile File="$(MSBuildThisFileDirectory)BuildNumber.txt">
-      <Output TaskParameter="Lines" PropertyName="BuildNumber" />
-    </ReadLinesFromFile>
+    <!-- Step 2: Increment BuildNumber, then assign back to BuildNumber -->
+    <PropertyGroup>
+      <BuildNumber>$([MSBuild]::Add($(BuildNumber), 1))</BuildNumber>
+    </PropertyGroup>
 
     <!-- Print the new build number to the MSBuild log -->
     <Message Text="Next BuildNumber: $(BuildNumber)" Importance="High" />
