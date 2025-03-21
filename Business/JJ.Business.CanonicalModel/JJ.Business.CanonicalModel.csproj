@@ -35,9 +35,14 @@
     <Message Text="AUTO-INCREMENTING VERSION" Importance="High" />
 
     <!-- Read the existing build number -->
-    <ReadLinesFromFile File="$(MSBuildThisFileDirectory)BuildNumber.txt">
+    <ReadLinesFromFile File="$(MSBuildThisFileDirectory)BuildNumber.txt" Condition="Exists('$(MSBuildThisFileDirectory)BuildNumber.txt')">
       <Output TaskParameter="Lines" PropertyName="BuildNum" />
     </ReadLinesFromFile>
+
+    <!-- Ensure BuildNum is set before incrementing -->
+    <PropertyGroup>
+      <BuildNum Condition="'$(BuildNum)' == ''">0</BuildNum>
+    </PropertyGroup>
 
     <!-- Increment the number -->
     <Exec Command="powershell -Command &quot;[int]$v=$(BuildNum); $v++; Set-Content BuildNumber.txt $v&quot;" />
@@ -58,7 +63,7 @@
     <!-- Write the new version to a temporary MSBuild props file -->
     <WriteLinesToFile 
         File="$(MSBuildThisFileDirectory)Version.props" 
-        Lines="&lt;Project&gt;&lt;PropertyGroup&gt;&lt;VERSION_FROM_FILE&gt;$(NewBuildNum)&lt;/VERSION_FROM_FILE&gt;&lt;/PropertyGroup&gt;&lt;/Project&gt;"
+        Lines="&lt;Project&gt;&lt;PropertyGroup&gt;&lt;VERSION_FROM_FILE&gt;$(NewBuildNum)&lt;/VERSION_FROM_FILE&gt;&lt;/PropertyGroup&gt;&lt;/Project&gt;" 
         Overwrite="true" 
         Encoding="UTF-8" />
 
