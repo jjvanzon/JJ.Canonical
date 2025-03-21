@@ -33,7 +33,7 @@
     </None>
   </ItemGroup>
   
-  <Target Name="AutoIncrementVersion" BeforeTargets="Compile">
+  <Target Name="AutoIncrementVersion" BeforeTargets="Build">
     <Message Text="AUTO-INCREMENTING VERSION" Importance="High" />
 
     <!-- Read the existing build number -->
