@@ -4,8 +4,8 @@
     <TargetFramework>net9.0</TargetFramework>
     <OutputType>Library</OutputType>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Version Condition="'$(BuildNumber)' == ''">0.250.0</Version>
-    <Version Condition="'$(BuildNumber)' != ''">0.250.$(BuildNumber)</Version>
+    <Version Condition="'$(BuildNumber)'==''">0.250.0</Version>
+    <Version Condition="'$(BuildNumber)'!=''">0.250.$(BuildNumber)</Version>
     <Description>Types to share data between JJ projects.</Description>
     <PackageTags>canonical model integration esb</PackageTags>
     <Authors>JJ van Zon</Authors>
@@ -32,22 +32,12 @@
   </ItemGroup>
   
   <Target Name="AutoIncrementVersion" BeforeTargets="Build">
-    <Message Text="AUTO-INCREMENT VERSION" Importance="High" />
-
     <!-- Default empty BuildNumber to 0 before incrementing -->
     <PropertyGroup><BuildNumber Condition="'$(BuildNumber)' == ''">0</BuildNumber></PropertyGroup>
-
-    <!-- Step 2: Increment BuildNumber, then assign back to BuildNumber -->
-    <PropertyGroup>
-      <BuildNumber>$([MSBuild]::Add($(BuildNumber), 1))</BuildNumber>
-    </PropertyGroup>
-
-    <!-- Print the new build number to the MSBuild log -->
-    <Message Text="Next BuildNumber: $(BuildNumber)" Importance="High" />
-    
-    <!-- Write the new version to a temporary MSBuild props file -->
+    <!-- Increment BuildNumber, then assign back to BuildNumber -->
+    <PropertyGroup><BuildNumber>$([MSBuild]::Add($(BuildNumber), 1))</BuildNumber></PropertyGroup>
+    <!-- Write the new version to a MSBuild props file -->
     <WriteLinesToFile File="$(MSBuildThisFileDirectory)BuildNumber.props" Lines="&lt;Project&gt;&lt;PropertyGroup&gt;&lt;BuildNumber&gt;$(BuildNumber)&lt;/BuildNumber&gt;&lt;/PropertyGroup&gt;&lt;/Project&gt;" Overwrite="true" Encoding="UTF-8" />
-
   </Target>
 
 </Project>

@@ -1,0 +1,17 @@
+JJ.Business.CanonicalModel.csproj:
+
+    <!--
+    <PropertyGroup>
+      <BuildNumber>$($(BuildNumber) + 1)</BuildNumber>
+    </PropertyGroup>-->
+    
+    <!-- Increment the number and write to file --><!--
+    <Exec Command="powershell -Command &quot;[int]$buildNumber=$(BuildNumber); $buildNumber++; Set-Content BuildNumber.txt $buildNumber&quot;" />-->
+
+    <!-- Force MSBuild to re-read the updated file -->
+    <!--<ReadLinesFromFile File="$(MSBuildThisFileDirectory)BuildNumber.txt">
+      <Output TaskParameter="Lines" PropertyName="BuildNumber" />
+    </ReadLinesFromFile>-->
+
+    <!-- Print the build number to the MSBuild log -->
+    <!--<Message Text="AUTO-INCREMENTED BUILD NUMBER = $(BuildNumber)" Importance="High" />-->
