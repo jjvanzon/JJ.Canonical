@@ -4,8 +4,8 @@
     <TargetFramework>net9.0</TargetFramework>
     <OutputType>Library</OutputType>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <!--<Version>0.250.1</Version>-->
-    <Version>0.250.$(VERSION_FROM_FILE)</Version>
+    <Version Condition="'$(VERSION_FROM_FILE)' == ''">0.250.0</Version>
+    <Version Condition="'$(VERSION_FROM_FILE)' != ''">0.250.$(VERSION_FROM_FILE)</Version>
     <Description>Types to share data between JJ projects.</Description>
     <PackageTags>canonical model integration esb</PackageTags>
     <Authors>JJ van Zon</Authors>
