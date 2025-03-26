@@ -2,7 +2,6 @@
   <Import Project="BuildNumber.props" Condition="Exists('BuildNumber.props')" />
   <PropertyGroup>
     <TargetFramework>net9.0</TargetFramework>
-    <OutputType>Library</OutputType>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Version Condition="'$(BuildNumber)'==''">0.250.0</Version>
     <Version Condition="'$(BuildNumber)'!=''">0.250.$(BuildNumber)</Version>
