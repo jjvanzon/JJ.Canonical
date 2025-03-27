@@ -1,10 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-  <Import Project="BuildNumber.props" Condition="Exists('BuildNumber.props')" />
   <PropertyGroup>
     <TargetFramework>net9.0</TargetFramework>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Version Condition="'$(BuildNumber)'==''">0.250.0</Version>
-    <Version Condition="'$(BuildNumber)'!=''">0.250.$(BuildNumber)</Version>
+    <Version>0.250.$(BuildNum)</Version>
     <Description>Types to share data between JJ projects.</Description>
     <PackageTags>canonical model integration esb</PackageTags>
     <Authors>JJ van Zon</Authors>
@@ -29,14 +27,7 @@
       <PackagePath>\</PackagePath>
     </None>
   </ItemGroup>
-  
-  <Target Name="AutoIncrementVersion" BeforeTargets="Build">
-    <!-- Default empty BuildNumber to 0 before incrementing -->
-    <PropertyGroup><BuildNumber Condition="'$(BuildNumber)' == ''">0</BuildNumber></PropertyGroup>
-    <!-- Increment BuildNumber, then assign back to BuildNumber -->
-    <PropertyGroup><BuildNumber>$([MSBuild]::Add($(BuildNumber), 1))</BuildNumber></PropertyGroup>
-    <!-- Write the new version to a MSBuild props file -->
-    <WriteLinesToFile File="$(MSBuildThisFileDirectory)BuildNumber.props" Lines="&lt;Project&gt;&lt;PropertyGroup&gt;&lt;BuildNumber&gt;$(BuildNumber)&lt;/BuildNumber&gt;&lt;/PropertyGroup&gt;&lt;/Project&gt;" Overwrite="true" Encoding="UTF-8" />
-  </Target>
-
+  <ItemGroup>
+    <PackageReference Include="JJ.AutoIncrementVersion" Version="1.8.1041" />
+  </ItemGroup>
 </Project>
