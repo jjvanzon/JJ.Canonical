@@ -1,31 +1,35 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net9.0</TargetFramework>
-    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <TargetFrameworks>net9.0;net8.0;netstandard2.1;netstandard2.0</TargetFrameworks>
     <Version>0.250.$(BuildNum)</Version>
     <Description>Types to share data between JJ projects.</Description>
     <PackageTags>canonical model integration esb</PackageTags>
     <Authors>JJ van Zon</Authors>
-    <Copyright>Copyright © Jan Joost van Zon 2013-2025</Copyright>
+    <Copyright>Copyright © Jan Joost van Zon 2013 - 2025</Copyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>    
-    <RepositoryUrl>https://github.com/jjvanzon/JJ.Canonical</RepositoryUrl>
-    <PackageProjectUrl>https://github.com/jjvanzon/JJ.Canonical</PackageProjectUrl>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <IncludeSymbols>True</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <PackageIcon>jj-icon-64x64-margin4.png</PackageIcon>
     <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/jjvanzon/JJ.Canonical</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/jjvanzon/JJ.Canonical</PackageProjectUrl>
   </PropertyGroup>
   <ItemGroup>
     <None Remove="JJ.Business.CanonicalModel.v3.ncrunchproject" />
     <None Remove="NCrunch.JJ.Business.CanonicalModel_AnalysisBuild.xml" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\README.md">
+    <Content Include="..\..\README.md">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
-    </None>
-    <None Include="..\..\Resources\jj-icon-64x64-margin4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Resources\jj-icon-64x64-margin4.png">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
-    </None>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="JJ.AutoIncrementVersion" Version="1.8.1041" />
