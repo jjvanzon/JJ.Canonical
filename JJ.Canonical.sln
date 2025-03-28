@@ -17,6 +17,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JJ.Business.CanonicalModel.Tests", "Business\JJ.Business.CanonicalModel.Tests\JJ.Business.CanonicalModel.Tests.csproj", "{CC2AE157-DECD-47B5-91A2-A03FBBCA2201}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +33,10 @@ Global
 		{26682821-416E-48F9-BF62-C489844C9700}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{26682821-416E-48F9-BF62-C489844C9700}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{26682821-416E-48F9-BF62-C489844C9700}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC2AE157-DECD-47B5-91A2-A03FBBCA2201}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC2AE157-DECD-47B5-91A2-A03FBBCA2201}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC2AE157-DECD-47B5-91A2-A03FBBCA2201}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC2AE157-DECD-47B5-91A2-A03FBBCA2201}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
