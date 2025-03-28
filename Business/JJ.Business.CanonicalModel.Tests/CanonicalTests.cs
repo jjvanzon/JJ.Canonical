@@ -1,4 +1,6 @@
 ﻿// ReSharper disable UnusedVariable
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+
 namespace JJ.Business.CanonicalModel.Tests;
 
 [TestClass]
@@ -21,7 +23,30 @@ public sealed class CanonicalTests
         var model = new ValidationMessage
         {
             PropertyKey = "MyProp",
-            Text = "Hello"
+            Text        = "Hello"
+        };
+    }
+
+    /// <summary>
+    /// Demonstrates structure and flaws of the legacy Result class.
+    /// </summary>
+    [TestMethod]
+    public void Test_Canonical_Result()
+    {
+        var result = new Result
+        {
+            Successful = true,
+            // "Messages" for brevity and generalization would have been nice.
+            // It's a List<T> not an IList<T> on purpose:
+            // This makes it easier for serialization systems to
+            // know what collection type to deserialize.
+            ValidationMessages = new List<ValidationMessage>
+            {
+                // Again: Just strings would have sufficed.
+                // Later versions do this.
+                new ValidationMessage { PropertyKey = "MyProp", Text      = "Hello" },
+                new ValidationMessage { PropertyKey = "AnotherProp", Text = "World" }
+            }
         };
     }
 }
