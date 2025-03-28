@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <Version>0.250.$(BuildNum)</Version>
-    <Description>JJ.Canonical contains shared data types used across JJ projects. JJ.Canonical.Build is a supporting tool for its development, designed to trigger once per solution build.</Description>
+    <Description>JJ.Canonical contains shared data types used across JJ projects. JJ.Canonical.Build is a supporting tool for its development, designed to trigger at the start of the solution build.</Description>
     <PackageTags></PackageTags>
     <Authors>JJ van Zon</Authors>
     <Copyright>Copyright © Jan Joost van Zon 2013 - 2025</Copyright>
@@ -11,9 +11,23 @@
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <IncludeSymbols>True</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <PackageIcon>jj-icon-64x64-margin4.png</PackageIcon>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/jjvanzon/JJ.Canonical</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/jjvanzon/JJ.Canonical</PackageProjectUrl>
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Resources\jj-icon-64x64-margin4.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Remove="JJ.Canonical.Build.v3.ncrunchproject" />
   </ItemGroup>
 

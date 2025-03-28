@@ -18,14 +18,7 @@ Legacy version updated to newer .NET.
     <RepositoryUrl>https://github.com/jjvanzon/JJ.Canonical</RepositoryUrl>
     <PackageProjectUrl>https://github.com/jjvanzon/JJ.Canonical</PackageProjectUrl>
   </PropertyGroup>
-  <ItemGroup>
-    <None Remove="JJ.Business.CanonicalModel.net8.0.v3.ncrunchproject" />
-    <None Remove="JJ.Business.CanonicalModel.net9.0.v3.ncrunchproject" />
-    <None Remove="JJ.Business.CanonicalModel.netstandard2.0.v3.ncrunchproject" />
-    <None Remove="JJ.Business.CanonicalModel.netstandard2.1.v3.ncrunchproject" />
-    <None Remove="JJ.Business.CanonicalModel.v3.ncrunchproject" />
-    <None Remove="NCrunch.JJ.Business.CanonicalModel_AnalysisBuild.xml" />
-  </ItemGroup>
+  
   <ItemGroup>
     <Content Include="..\..\README.md">
       <Pack>True</Pack>
@@ -38,7 +31,17 @@ Legacy version updated to newer .NET.
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
+  
   <ItemGroup>
     <ProjectReference Include="..\..\Build\JJ.Canonical.Build.csproj" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <None Remove="JJ.Business.CanonicalModel.net8.0.v3.ncrunchproject" />
+    <None Remove="JJ.Business.CanonicalModel.net9.0.v3.ncrunchproject" />
+    <None Remove="JJ.Business.CanonicalModel.netstandard2.0.v3.ncrunchproject" />
+    <None Remove="JJ.Business.CanonicalModel.netstandard2.1.v3.ncrunchproject" />
+    <None Remove="JJ.Business.CanonicalModel.v3.ncrunchproject" />
+    <None Remove="NCrunch.JJ.Business.CanonicalModel_AnalysisBuild.xml" />
   </ItemGroup>
 </Project>
