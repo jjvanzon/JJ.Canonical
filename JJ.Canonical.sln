@@ -5,8 +5,6 @@ VisualStudioVersion = 17.11.35312.102
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JJ.Business.CanonicalModel", "Business\JJ.Business.CanonicalModel\JJ.Business.CanonicalModel.csproj", "{08EA4A4E-D815-47AE-9277-DA6672D36214}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JJ.Business.CanonicalModel.Net48", "Business\JJ.Business.CanonicalModel.Net48\JJ.Business.CanonicalModel.Net48.csproj", "{26682821-416E-48F9-BF62-C489844C9700}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}"
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
@@ -21,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JJ.Business.CanonicalModel.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JJ.Canonical.Build", "Build\JJ.Canonical.Build.csproj", "{99DB68FA-BA93-4765-B7EB-DAB5E3224DE1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JJ.Business.CanonicalModel.Net48", "Business\JJ.Business.CanonicalModel.Net48\JJ.Business.CanonicalModel.Net48.csproj", "{26682821-416E-48F9-BF62-C489844C9700}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,10 +31,6 @@ Global
 		{08EA4A4E-D815-47AE-9277-DA6672D36214}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{08EA4A4E-D815-47AE-9277-DA6672D36214}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{08EA4A4E-D815-47AE-9277-DA6672D36214}.Release|Any CPU.Build.0 = Release|Any CPU
-		{26682821-416E-48F9-BF62-C489844C9700}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{26682821-416E-48F9-BF62-C489844C9700}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{26682821-416E-48F9-BF62-C489844C9700}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{26682821-416E-48F9-BF62-C489844C9700}.Release|Any CPU.Build.0 = Release|Any CPU
 		{CC2AE157-DECD-47B5-91A2-A03FBBCA2201}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{CC2AE157-DECD-47B5-91A2-A03FBBCA2201}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CC2AE157-DECD-47B5-91A2-A03FBBCA2201}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -43,6 +39,10 @@ Global
 		{99DB68FA-BA93-4765-B7EB-DAB5E3224DE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{99DB68FA-BA93-4765-B7EB-DAB5E3224DE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{99DB68FA-BA93-4765-B7EB-DAB5E3224DE1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26682821-416E-48F9-BF62-C489844C9700}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26682821-416E-48F9-BF62-C489844C9700}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26682821-416E-48F9-BF62-C489844C9700}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26682821-416E-48F9-BF62-C489844C9700}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
