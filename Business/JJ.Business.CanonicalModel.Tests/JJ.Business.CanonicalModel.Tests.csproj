@@ -1,10 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <!-- TODO: Add more targets explicitly. (Top-level) projects cannot RUN as netstandard. See: -->
-    <!-- https://www.ncrunch.net/documentation/considerations-and-constraints_netstandard-test-projects-->
-    <!--<TargetFrameworks>net9.0;net8.0;netstandard2.1;netstandard2.0</TargetFrameworks>-->
-    <!--<TargetFrameworks>net9.0;net8.0;net7.0;net6.0;net5.0;net48;net481;net461</TargetFrameworks>-->
     <TargetFrameworks>net9.0;net8.0;net7.0;net6.0;net5.0;net461</TargetFrameworks>
     <LangVersion>latest</LangVersion>
   </PropertyGroup>
@@ -15,6 +11,15 @@
 
   <ItemGroup>
     <Compile Remove="~GlobalUsings.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="JJ.Business.CanonicalModel.Tests.net461.v3.ncrunchproject" />
+    <None Remove="JJ.Business.CanonicalModel.Tests.net5.0.v3.ncrunchproject" />
+    <None Remove="JJ.Business.CanonicalModel.Tests.net6.0.v3.ncrunchproject" />
+    <None Remove="JJ.Business.CanonicalModel.Tests.net7.0.v3.ncrunchproject" />
+    <None Remove="JJ.Business.CanonicalModel.Tests.net8.0.v3.ncrunchproject" />
+    <None Remove="JJ.Business.CanonicalModel.Tests.net9.0.v3.ncrunchproject" />
   </ItemGroup>
 
   <ItemGroup>

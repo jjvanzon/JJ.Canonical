@@ -4,6 +4,7 @@
 // ReSharper disable ArrangeObjectCreationWhenTypeEvident
 
 using System.Collections.Generic;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace JJ.Business.CanonicalModel.Tests
 {

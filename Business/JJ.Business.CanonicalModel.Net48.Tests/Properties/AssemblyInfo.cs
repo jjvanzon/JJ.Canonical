@@ -7,9 +7,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("JJ.Business.CanonicalModel.Net48.Tests")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Jan Joost van Zon")]
+[assembly: AssemblyCompany("JJ van Zon")]
 [assembly: AssemblyProduct("JJ.Canonical")]
-[assembly: AssemblyCopyright("Copyright © Jan Joost van Zon 2025")]
+[assembly: AssemblyCopyright("Copyright © Jan Joost van Zon 2013 - 2025")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
