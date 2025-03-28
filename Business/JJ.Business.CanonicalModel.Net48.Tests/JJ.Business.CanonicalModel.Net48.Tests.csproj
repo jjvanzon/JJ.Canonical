@@ -53,6 +53,12 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\JJ.Business.CanonicalModel.Net48\JJ.Business.CanonicalModel.Net48.csproj">
+      <Project>{26682821-416e-48f9-bf62-c489844c9700}</Project>
+      <Name>JJ.Business.CanonicalModel.Net48</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>
