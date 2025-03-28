@@ -10,14 +10,16 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}"
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
-		Business\BuildNum.xml = Business\BuildNum.xml
-		Business\Directory.Build.props = Business\Directory.Build.props
+		BuildNum.xml = BuildNum.xml
+		Directory.Build.props = Directory.Build.props
 		Resources\jj-icon-64x64-margin4.png = Resources\jj-icon-64x64-margin4.png
 		LICENSE.TXT = LICENSE.TXT
 		README.md = README.md
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JJ.Business.CanonicalModel.Tests", "Business\JJ.Business.CanonicalModel.Tests\JJ.Business.CanonicalModel.Tests.csproj", "{CC2AE157-DECD-47B5-91A2-A03FBBCA2201}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JJ.Canonical.Build", "Build\JJ.Canonical.Build.csproj", "{99DB68FA-BA93-4765-B7EB-DAB5E3224DE1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,6 +39,10 @@ Global
 		{CC2AE157-DECD-47B5-91A2-A03FBBCA2201}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CC2AE157-DECD-47B5-91A2-A03FBBCA2201}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CC2AE157-DECD-47B5-91A2-A03FBBCA2201}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99DB68FA-BA93-4765-B7EB-DAB5E3224DE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99DB68FA-BA93-4765-B7EB-DAB5E3224DE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99DB68FA-BA93-4765-B7EB-DAB5E3224DE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99DB68FA-BA93-4765-B7EB-DAB5E3224DE1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

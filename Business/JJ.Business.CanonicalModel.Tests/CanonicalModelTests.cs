@@ -9,7 +9,7 @@ public sealed class CanonicalModelTests
     {
         var idAndName = new IDAndName<string>
         {
-            ID   = 1, // Flaw: Type argument <string> is unused used. ID is still integer here.
+            ID   = 1, // Flaw: Type argument <string> is actually not used. ID is still integer here.
             Name = "My Name"
         };
     }

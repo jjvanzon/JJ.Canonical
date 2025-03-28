@@ -32,6 +32,6 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="JJ.AutoIncrementVersion" Version="1.8.1041" />
+    <ProjectReference Include="..\..\Build\JJ.Canonical.Build.csproj" />
   </ItemGroup>
 </Project>
