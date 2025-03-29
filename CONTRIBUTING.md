@@ -9,7 +9,7 @@ This project is developed under special "legacy" constraints that affect version
 ### Legacy Branching
 
 - The original `main` branch is now called `legacy`.
-- The new `main` branch branches off from an older point in that `legacy` history.
+- The new `main` branches off from an older point in that `legacy` history.
 - Why the throwback? We're "replaying" the past to unearth hidden gems that never saw the light of day. This lets us retroactively release not just libraries but entire applications otherwise lost.
 - __The `legacy` branch shall not be deleted! The `legacy` shall remain!__
 
