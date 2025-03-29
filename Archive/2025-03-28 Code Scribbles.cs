@@ -7,3 +7,5 @@
     <!-- https://www.ncrunch.net/documentation/considerations-and-constraints_netstandard-test-projects-->
     <!--<TargetFrameworks>net9.0;net8.0;netstandard2.1;netstandard2.0</TargetFrameworks>-->
     <!--<TargetFrameworks>net9.0;net8.0;net7.0;net6.0;net5.0;net48;net481;net461</TargetFrameworks>-->
+
+JJ.Canonical contains shared data types used across JJ projects.

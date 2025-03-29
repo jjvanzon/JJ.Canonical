@@ -3,7 +3,7 @@
     <TargetFrameworks>net9.0;net8.0;netstandard2.1;netstandard2.0</TargetFrameworks>
     <Version>0.250.$(BuildNum)</Version>
     <Description>
-Types to share data between JJ projects. 
+Internal infrastructure. Shared data types used across JJ projects.
 Legacy version updated to newer .NET.
     </Description>
     <PackageTags>canonical;model;integration;esb</PackageTags>
