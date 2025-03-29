@@ -3,10 +3,12 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <Version>0.250.$(BuildNum)</Version>
-    <Description>JJ.Canonical contains shared data types used across JJ projects. JJ.Canonical.Build is a supporting tool for its development, designed to trigger at the start of the solution build.</Description>
+    <Description>
+JJ.Canonical contains shared data types used across JJ projects.
+JJ.Canonical.Build is a supporting tool for its development, designed to trigger at the start of the solution build.</Description>
     <PackageTags></PackageTags>
     <Authors>JJ van Zon</Authors>
-    <Copyright>Copyright © Jan Joost van Zon 2013 - 2025</Copyright>
+    <Copyright>Copyright © 2013 - 2025 Jan Joost van Zon</Copyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>    
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <IncludeSymbols>True</IncludeSymbols>
