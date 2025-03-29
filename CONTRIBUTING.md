@@ -1,11 +1,6 @@
 ﻿JJ.Canonical - Contributing
 ===========================
 
-__Contents__
-
-- [🏗️ Dev Env](#️-dev-env)
-- [🚀 Deployment](#-deployment)
-
 🏗️ Dev Env
 -----------
 
