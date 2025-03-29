@@ -6,21 +6,27 @@
 Legacy
 ------
 
-This project is now developed under specific `legacy` constraints that influence `versioning`, `branching` scenarios, and framework `targeting`. This all requires a little more explanation than it otherwise would.
+This project is developed under specific `legacy` constraints that influence __versioning__, __branching__, and framework __targeting__. These constraints require more explanation.
 
 ### Legacy Branching
 
-The original `main` branch is now called `legacy`. The new `main` branch is branched off of an old point in the `legacy` history. History is being replayed as it were. There are hidden gems in that history that never got to see the light of day. Replaying it, gets us to release retro-actively, not only for the libraries in this repo, but for whole applications. The `legacy` branch shall not be deleted! The `legacy` shall remain!
+The original `main` branch is now called `legacy`. The new `main` was branched from an earlier point in `legacy` history. History is being replayed, as it were.
+
+There are hidden gems in that history-code that never saw the light of day. Replaying it allows us to retroactively release not just these libraries, but entire applications otherwise lost.
+
+**The `legacy` branch shall not be deleted. The `legacy` shall remain.**
 
 ### Legacy Deployments
 
-Originally there were about `15` projects released from `legacy` to `NuGet` around `2018`. Those were `.NET 4.6.1`, compatible with the `Mono` compiler, a platform now retired.
+Around `2018`, about 15 projects were released from `legacy` to `NuGet`. These were `.NET 4.6.1` libraries, compatible with the now-retired `Mono` compiler.
 
-New deployments are done with `.NET 9` as the back-bone, but also targeting `.NET Standard` for compatibility. Fixed-up legacy versions, are released successively to `NuGet.org`.
+New deployments use `.NET 9` as a backbone, and also target `.NET Standard` for compatibility. Fixed-up `legacy` versions are released to `NuGet.org`, step by step.
 
 ### Legacy Versioning
 
-Code released for `.NET 9`, but coming out of the legacy branch, would be released under version numbers, starting with a `0`, like: `0.250.1053`. This is to signal it is the "prequal" to the versions of it on `NuGet` that are already around the range of `1.5.1392`.
+Code released for `.NET 9`, but pulled from the `legacy` history, would use version numbers, starting with `0`, e.g. `0.250.1053`, signaling that this code predates the `2018` releases, is the "prequal" so to say, of the versions around the range of `1.5.1392`.
+
+The `.Core`-suffixed projects contain either new code developed independently of the `legacy` branch, or code copied from the **latest** version of the `legacy` branch.
 
 ### Namespaces
 
@@ -36,13 +42,13 @@ The namespace without a suffix here is code directly pulled from the `legacy` br
 
 There are also specific `.Net48` projects. These contain the same code as the main project, but then compiled for `.NET Framework 4.8`. Those are there, to link to from systems that are not on the map for a `.NET` upgrade.
 
-The `.Core` suffixed project contain either new code developed independently of the `legacy` OR code copied from the __newest__ version of `legacy` branch.
+The `.Core`-suffixed projects contain either new code developed independently of the `legacy` or code copied from the __latest__ version of `legacy` branch.
 
-More about this follows below.
+More about this below.
 
 ### Legacy Immutability
 
-Suffix-free projects, like `JJ.Framework.Configuration` are supposed to remain untouched, utmost required fixes excluded. The code pulled from `legacy` history can't be changed much, or subsequent merges from `legacy` would cause a lot of merge conflicts that would be a hassle to reconcile. It's the unwritten rule that you're not supposed to touch those (much), even though there's nothing stopping you from doing so. Only the utmost necessary fixes are to be applied, as locally as possible, to make a future pull from legacy history possible with minimal friction.
+Suffix-free projects, like `JJ.Framework.Configuration` are supposed to remain untouched, utmost required fixes excluded. The code pulled from `legacy` history can't be changed much, or subsequent merges from `legacy` would cause a lot of merge conflicts that would be a hassle to reconcile. It's the unwritten rule that you're not supposed to touch those (much), even though there's nothing stopping you from doing so. Only the utmost necessary fixes should be applied, as locally as possible, to keep future merges from `legacy` history possible with minimal friction.
 
 ### New Extensions
 
