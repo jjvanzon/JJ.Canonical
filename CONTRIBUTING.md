@@ -1,12 +1,10 @@
 ﻿JJ.Canonical - Contributing
 ===========================
 
-*JJ van Zon, 2025*
-
 Legacy
 ------
 
-This project is developed under specific `legacy` constraints that influence __versioning__, __branching__, and framework __targeting__. These constraints require more explanation.
+This project is developed under specific `legacy` constraints that influence __versioning__, __branching__, and framework __targeting__. This requires more explanation.
 
 ### Legacy Branching
 
@@ -18,15 +16,15 @@ There are hidden gems in that history-code that never saw the light of day. Repl
 
 ### Legacy Deployments
 
-Around `2018`, about 15 projects were released from `legacy` to `NuGet`. These were `.NET 4.6.1` libraries, compatible with the now-retired `Mono` compiler.
+Around `2018`, about `15` projects were released from `legacy` to `NuGet`. These were `.NET 4.6.1` libraries, compatible with the now-retired `Mono` compiler.
 
 New deployments use `.NET 9` as a backbone, and also target `.NET Standard` for compatibility. Fixed-up `legacy` versions are released to `NuGet.org`, step by step.
 
 ### Legacy Versioning
 
-Code released for `.NET 9`, but pulled from the `legacy` history, would use version numbers, starting with `0`, e.g. `0.250.1053`, signaling that this code predates the `2018` releases, is the "prequal" so to say, of the versions around the range of `1.5.1392`.
+Code released for `.NET 9`, but pulled from the `legacy` history, would use version numbers, starting with `0`, e.g. `0.250.1053`, signaling that this code predates the `2018` releases, is the "prequal" so to say, of the versions around the range of `1.5.x`.
 
-The `.Core`-suffixed projects contain either new code developed independently of the `legacy` branch, or code copied from the **latest** version of the `legacy` branch.
+The `.Core`-suffixed projects are released with versions in the range of `1.8.x`, signaling the continuation of the `legacy` ones versioned e.g. `1.5.x`.
 
 ### Namespaces
 
@@ -52,7 +50,7 @@ Suffix-free projects, like `JJ.Framework.Configuration` are supposed to remain u
 
 ### New Extensions
 
-As mentioned, project suffixed with `.Core` can contain extensions that not yet existed in the suffix-free code. We don't stop new developments just because the main code is a code freeze from long ago. We add new things we'd like.
+The `.Core`-suffixed projects can contain new code developed independently of the `legacy` branch. We don't stop new developments just because the main code is a code freeze from long ago. We add new things we'd like.
 
 ### Copies from New
 
