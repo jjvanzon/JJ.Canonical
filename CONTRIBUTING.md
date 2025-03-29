@@ -18,7 +18,6 @@ Originally there were about `15` projects released from `legacy` to `NuGet` arou
 
 New deployments are done with `.NET 9` as the back-bone, but also targeting `.NET Standard` for compatibility. Fixed-up legacy versions, are released successively to `NuGet.org`.
 
-
 ### Legacy Versioning
 
 Code released for `.NET 9`, but coming out of the legacy branch, would be released under version numbers, starting with a `0`, like: `0.250.1053`. This is to signal it is the "prequal" to the versions of it on `NuGet` that are already around the range of `1.5.1392`.
@@ -33,27 +32,29 @@ JJ.Framework.Configuration.Net48
 JJ.Framework.Configuration.Core
 ```
 
-The namespace without a suffix here is code that was pulled from the `legacy` branch. Those projects are upgraded to `.NET 9` also targeting `.NET Standard` for compatibility.
+The namespace without a suffix here is code directly pulled from the `legacy` branch. Those projects are upgraded to `.NET 9` also targeting `.NET Standard` for compatibility.
 
 There are also specific `.Net48` projects. These contain the same code as the main project, but then compiled for `.NET Framework 4.8`. Those are there, to link to from systems that are not on the map for a `.NET` upgrade.
 
-The `.Core` suffixed project contain either new code developed independently of the `legacy` OR code copied from the __newest__ version of `legacy` branch. 
+The `.Core` suffixed project contain either new code developed independently of the `legacy` OR code copied from the __newest__ version of `legacy` branch.
+
+More about this follows below.
 
 ### Legacy Immutability
 
-Suffix-free projects, like `JJ.Framework.Configuration` are supposed to remain untouched, required fixes excluded. The code pulled from `legacy` history can't be changed much, or subsequent merges from `legacy` would cause a lot of merge conflicts that would be a hassle to reconcile. It's the unwritten rule that you're not supposed to touch those (much), even though there's nothing stopping you from doing so. Only the utmost necessary fixes are to be applied, as locally as possible, to make a future pull from legacy history possible with minimal friction.
+Suffix-free projects, like `JJ.Framework.Configuration` are supposed to remain untouched, utmost required fixes excluded. The code pulled from `legacy` history can't be changed much, or subsequent merges from `legacy` would cause a lot of merge conflicts that would be a hassle to reconcile. It's the unwritten rule that you're not supposed to touch those (much), even though there's nothing stopping you from doing so. Only the utmost necessary fixes are to be applied, as locally as possible, to make a future pull from legacy history possible with minimal friction.
 
 ### New Extensions
 
-As mentioned, project suffixed with `.Core` can contain extensions that not yet existed in the suffix-free code. So we don't stop new developments just because the main code is a code freeze from long ago.
+As mentioned, project suffixed with `.Core` can contain extensions that not yet existed in the suffix-free code. We don't stop new developments just because the main code is a code freeze from long ago. We add new things we'd like.
 
 ### Copies from New
 
-The projects suffixed `.Core` also contain code copies from the latest version from the `legacy` branch. See, code was pulled from an old commit in the `legacy` branch, and sometimes there's good stuff in the newest commit in the `legacy` branch. And we don't want to stifle development just because we've created this `legacy` situation, therefor these code copies and extensions are.
+The projects suffixed `.Core` also contain code copies from the latest version from the `legacy` branch. See, code was pulled from an old commit in the `legacy` branch, and sometimes there's good stuff in the newest commit in the `legacy` branch. And we don't want to stifle development just because we've created this `legacy` situation, therefor these code copies and extensions are put in the `.Core` projects too to get the most modern code versions in there.
 
 ### Conclusion
 
-Though these are quite a bit of constraints they all make sure that we can do these legacy pull, history replay, revamp projects.
+Though these are quite a bit of constraints they all make sure that we can do these legacy pulls, history replay, revamp projects.
 
 
 🏗️ Dev Env
