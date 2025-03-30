@@ -15,4 +15,4 @@ This particular canonical model is a bit minimal. It includes only:
 - Validation messages  
 - ID and Name combos
 
-But at least it gets to combine data from `JJ.Framework.Validation` and `JJ.Framework.Business` to a single set of models to send it through multiple layers of the architecture.
+But at least it gets to combine data from `JJ.Framework.Validation` and [JJ.Framework.Business](https://www.nuget.org/packages/JJ.Framework.Business) to a single set of models to send it through multiple layers of the architecture.
