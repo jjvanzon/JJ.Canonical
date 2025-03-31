@@ -6,8 +6,7 @@ Internal infrastructure.
 Shared data types used across JJ projects.  
 Legacy version, updated to target newer .NET.
 
-[Canonical models](https://jjvanzon.github.io/JJs-Reference-Architecture/service-oriented-architecture.html#canonical-model) are a design pattern for exchanging data between systems with overlapping functionality.  
-[JJ's Software Architecture](https://jjvanzon.github.io/JJs-Reference-Architecture/) describes the concept under [Service Oriented Architecture](https://jjvanzon.github.io/JJs-Reference-Architecture/service-oriented-architecture.html#).
+[Canonical models](https://jjvanzon.github.io/JJs-Reference-Architecture/service-oriented-architecture.html#canonical-model) are a design pattern for exchanging data between systems with overlapping functionality. [JJ's Software Architecture](https://jjvanzon.github.io/JJs-Reference-Architecture/) describes the concept under [Service Oriented Architecture](https://jjvanzon.github.io/JJs-Reference-Architecture/service-oriented-architecture.html#).
 
 This particular canonical model is a bit minimal. It includes only:
 
