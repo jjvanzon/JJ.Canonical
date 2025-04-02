@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <Version>0.250.$(BuildNum)</Version>
-    <Description>Internal infrastructure. A supporting tool, designed to trigger initialization at the start of the JJ.Canonical solution build.</Description>
+    <Description>Internal infrastructure. Triggers initialization at the start of building JJ.Canonical.</Description>
     <PackageTags></PackageTags>
     <Authors>JJ van Zon</Authors>
     <Copyright>Copyright © 2013 - 2025 Jan Joost van Zon</Copyright>
@@ -32,7 +32,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="JJ.AutoIncrementVersion" Version="1.9.1106" />
+    <PackageReference Include="JJ.AutoIncrementVersion" Version="1.9.1106">
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
   </ItemGroup>
 
 </Project>
